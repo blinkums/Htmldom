@@ -699,6 +699,7 @@ class Htmldomnode
 			else
 			{
 				$sourceCharset = trim($sourceCharset);
+				$sourceCharset = str_replace(';', '', $sourceCharset);
 				$converted_text = iconv($sourceCharset, $targetCharset . '//IGNORE', $text);
 			}
 		}
